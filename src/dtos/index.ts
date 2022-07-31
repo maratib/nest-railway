@@ -34,17 +34,17 @@ export class PaginationDto {
   public limit: number = 2;
 }
 
-export class UserRegisterDto {
+export class UserDto {
   @ApiProperty({
     description: 'The name of the User',
-    example: 'Jhon Doe',
+    example: 'John Doe',
   })
   @IsNotEmpty()
   name: string;
 
   @ApiProperty({
     description: 'The email address of the User',
-    example: 'jhon.doe@gmail.com',
+    example: 'john.doe@gmail.com',
   })
   @IsNotEmpty({ message: 'No empty email allowed' })
   @IsEmail()
@@ -67,4 +67,26 @@ export class UserRegisterDto {
   @Length(8, 24)
   @Matches(REGEX.PASSWORD_RULE, { message: MESSAGES.PASSWORD_RULE_MESSAGE })
   confirm: string;
+}
+
+export class PostDto {
+  @ApiProperty({
+    description: 'Title of the Post',
+    example: 'My Funny post',
+  })
+  @IsNotEmpty()
+  title: string;
+
+  @ApiProperty({
+    description: 'Description of the Post',
+    example: 'Lorem ipsum',
+  })
+  @IsNotEmpty()
+  desc: string;
+
+  @ApiProperty({
+    description: 'Post Avatar',
+    example: 'image.jpg',
+  })
+  file: string;
 }

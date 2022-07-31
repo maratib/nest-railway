@@ -9,6 +9,9 @@ import { AppService } from './app.service';
 import { TaskService } from './task.service';
 import { AuthMiddleware } from './auth/middleware/AuthMiddleware';
 import { ApiModule } from './api/api.module';
+import { WelcomeController } from './welcome.controller';
+import { PostModule } from './post/post.module';
+import { MulterModule } from '@nestjs/platform-express';
 
 @Module({
   imports: [
@@ -18,12 +21,16 @@ import { ApiModule } from './api/api.module';
       isGlobal: true,
       load: [config],
     }),
+    // MulterModule.register({
+    //   dest: '../../public/upload',
+    // }),
     UserModule,
     AuthModule,
+    PostModule,
     ScheduleModule.forRoot(),
     ApiModule,
   ],
-  controllers: [],
+  controllers: [WelcomeController],
   providers: [AppService, TaskService],
 })
 export class AppModule {

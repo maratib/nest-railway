@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-13T17:48:53.813Z",
-    "modified": "2022-07-13T17:58:41.180Z",
+    "modified": "2022-07-31T15:43:50.056Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"username\": \"moon@gmail.com\",\n    \"password\": \"Sam@12345\"\n}",
+      "raw": "{\n    \"username\": \"waleed@gmail.com\",\n    \"password\": \"Sam@12345\"\n}",
       "form": []
     },
     "tests": []
@@ -63,13 +63,83 @@
     "method": "POST",
     "sortNum": 15000,
     "created": "2022-07-13T18:14:59.187Z",
-    "modified": "2022-07-31T15:10:08.360Z",
+    "modified": "2022-07-31T15:43:35.643Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"name\": \"Moon\",\n    \"email\": \"moon@gmail.com\",\n    \"password\": \"Sam@12345\",\n    \"confirm\": \"Sam@12345\"\n}",
+      "raw": "{\n    \"name\": \"Waleed\",\n    \"email\": \"waleed@gmail.com\",\n    \"password\": \"Sam@12345\",\n    \"confirm\": \"Sam@12345\"\n}",
       "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b28cc26a-513a-46e9-8b6d-637aa3ecb236",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "",
+    "name": "Home",
+    "url": "{{API}}",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-07-31T16:56:12.059Z",
+    "modified": "2022-07-31T16:56:23.367Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "b891869a-1927-40a8-b104-3d114478920e",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "cf17a37c-3484-40cd-b0ba-ff4db4e65129",
+    "name": "Create Post",
+    "url": "{{API}}/post",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2022-07-31T18:25:48.145Z",
+    "modified": "2022-07-31T21:23:58.135Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "title",
+          "value": "This is a Title"
+        },
+        {
+          "name": "desc",
+          "value": "This is a Description"
+        }
+      ],
+      "files": [
+        {
+          "name": "file",
+          "value": "../../../../../Desktop/h4kkrvgtilq41.jpg"
+        }
+      ]
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8bc13b85-b4e4-48dc-9bf2-4020cd3334ef",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "cf17a37c-3484-40cd-b0ba-ff4db4e65129",
+    "name": "allPosts",
+    "url": "{{API}}/post/all",
+    "method": "GET",
+    "sortNum": 25000,
+    "created": "2022-07-31T18:44:26.405Z",
+    "modified": "2022-07-31T18:45:17.355Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
     },
     "tests": []
   }

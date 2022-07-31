@@ -4,7 +4,7 @@ import { Body, Controller, Get, Logger, Post, Request, UseGuards } from '@nestjs
 import { AuthGuard } from '@nestjs/passport';
 import { ApiBadRequestResponse, ApiBearerAuth, ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { SETTINGS } from '@/utils/app.utils';
-import { LoginDto, UserRegisterDto } from '@/dtos';
+import { LoginDto, UserDto } from '@/dtos';
 import { User } from '@/db/entities/user.entity';
 
 @ApiTags('Auth')
@@ -30,7 +30,7 @@ export class AuthController {
   })
   async doUserRegistration(
     @Body(SETTINGS.VALIDATION_PIPE)
-    userRegister: UserRegisterDto,
+    userRegister: UserDto,
   ): Promise<User> {
     return await this.userService.doUserRegistration(userRegister);
   }

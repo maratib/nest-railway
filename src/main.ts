@@ -26,7 +26,10 @@ async function bootstrap() {
   // Add helmet
   app.use(helmet());
 
-  app.enableCors();
+  app.enableCors({
+    allowedHeaders: '*',
+    origin: '*',
+  });
 
   // Set view engine
   app.useStaticAssets(join(__dirname, '..', 'public'));

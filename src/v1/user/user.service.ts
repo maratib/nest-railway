@@ -3,14 +3,14 @@ import { Injectable } from '@nestjs/common';
 import { User } from '@/db/entities/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { UserRegisterDto } from '@/dtos';
+import { UserDto } from '@/dtos';
 import { Role } from '@/types';
 
 @Injectable()
 export class UserService {
-  constructor(@InjectRepository(User) private readonly userRepo: Repository<User>) { }
+  constructor(@InjectRepository(User) private readonly userRepo: Repository<User>) {}
 
-  async doUserRegistration(userRegister: UserRegisterDto): Promise<User> {
+  async doUserRegistration(userRegister: UserDto): Promise<User> {
     return await this.userRepo.save(this.userRepo.create(userRegister));
     // return await this.userRepo.save(userRegister);
   }
