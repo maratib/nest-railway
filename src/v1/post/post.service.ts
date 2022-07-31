@@ -26,7 +26,11 @@ export class PostService {
   }
 
   async findAll(): Promise<Posts[]> {
-    return this.postRepo.find();
+    return this.postRepo.find({
+      order: {
+        id: 'DESC',
+      },
+    });
   }
 
   async doCreatePost(postDto: PostDto): Promise<Posts> {
