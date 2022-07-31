@@ -5,10 +5,10 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-07-13T17:48:08.070Z",
-    "modified": "2022-07-31T22:34:54.574Z",
+    "modified": "2022-07-31T22:35:58.173Z",
     "data": [
       {
-        "name": "API",
+        "name": "API2",
         "value": "http://localhost:3000/api/v1"
       },
       {
@@ -16,7 +16,7 @@
         "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IndhbGVlZEBnbWFpbC5jb20iLCJzdWIiOjIsImlhdCI6MTY1OTI4MjIzMCwiZXhwIjoxNjYwMTQ2MjMwfQ.1NdZ_W45ZYSui1IuQse9OZLx-LOdPcTg2OLzWjBwI0k"
       },
       {
-        "name": "API2",
+        "name": "API",
         "value": "https://api-nest.up.railway.app/api/v1"
       }
     ]
