@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "baseUrl": "./src",
+  "paths": {
+    "@/*": [
+      "./*"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "**/*spec.ts"
+  ]
+}

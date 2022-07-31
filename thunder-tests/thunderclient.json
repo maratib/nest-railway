@@ -1,0 +1,76 @@
+[
+  {
+    "_id": "e8ba8f46-1479-4e44-8b89-abcc837cfdf3",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "d1a0702a-f40b-4bd6-a13c-71fd7a9c4ed1",
+    "name": "Login",
+    "url": "{{API}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-07-13T17:48:53.813Z",
+    "modified": "2022-07-13T17:58:41.180Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"username\": \"moon@gmail.com\",\n    \"password\": \"Sam@12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8d1aabdd-4cfb-432d-8bc4-dcfd88db322d",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "d1a0702a-f40b-4bd6-a13c-71fd7a9c4ed1",
+    "name": "Whoami",
+    "url": "{{API}}/auth/user",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-13T17:54:52.120Z",
+    "modified": "2022-07-13T17:58:43.086Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "81475c1d-90de-43cc-bee8-e58db4329328",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "0c7ebe65-358e-46ed-8fac-4eb853894c1d",
+    "name": "allUsers",
+    "url": "{{API}}/user/all",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-13T17:56:37.992Z",
+    "modified": "2022-07-13T17:57:55.038Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "dd8098dd-5380-4db7-935b-2615d4f4f5f9",
+    "colId": "7cac1bd5-5c5b-4b90-bd20-6f7f1dfeab29",
+    "containerId": "d1a0702a-f40b-4bd6-a13c-71fd7a9c4ed1",
+    "name": "Register",
+    "url": "{{API}}/auth/register",
+    "method": "POST",
+    "sortNum": 15000,
+    "created": "2022-07-13T18:14:59.187Z",
+    "modified": "2022-07-31T15:10:08.360Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Moon\",\n    \"email\": \"moon@gmail.com\",\n    \"password\": \"Sam@12345\",\n    \"confirm\": \"Sam@12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

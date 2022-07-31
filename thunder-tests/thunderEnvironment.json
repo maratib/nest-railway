@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "871bd2d9-c1ea-46b6-a07f-28974183c0c6",
+    "name": "env",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-07-13T17:48:08.070Z",
+    "modified": "2022-07-31T15:22:13.694Z",
+    "data": [
+      {
+        "name": "API",
+        "value": "http://localhost:3000/api/v1"
+      },
+      {
+        "name": "TOKEN",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vb25AZ21haWwuY29tIiwic3ViIjoxLCJpYXQiOjE2NTkyODA4ODcsImV4cCI6MTY2MDE0NDg4N30.pWHNUflvW_kwJaUc8lUGyEBp2hBqECOZX2OS6FZQ1yU"
+      }
+    ]
+  }
+]
