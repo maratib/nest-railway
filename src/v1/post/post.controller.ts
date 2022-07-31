@@ -19,9 +19,17 @@ export class PostController {
   @ApiBearerAuth()
   @UseGuards(AuthGuard('jwt'))
   @Get('all')
-  async getAllPosts(@Query() query: PaginationDto): Promise<Pagination<Posts>> {
-    return await this.postService.getAllPosts(query);
+  async getAllPosts(): Promise<Posts[]> {
+    return await this.postService.findAll();
   }
+
+  // @ApiBearerAuth()
+  // @UseGuards(AuthGuard('jwt'))
+  // @Get('all')
+  // async getAllPosts(@Query() query: PaginationDto): Promise<Pagination<Posts>> {
+  //   return await this.postService.getAllPosts(query);
+
+  // }
 
   @ApiBearerAuth()
   @UseGuards(AuthGuard('jwt'))

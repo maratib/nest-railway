@@ -16,8 +16,17 @@ export class PostService {
     return paginate<Posts>(qb, options);
   }
 
+  /**
+   * Find all return pagination results
+   * @param options
+   * @returns
+   */
   async getAllPosts(options: IPaginationOptions): Promise<Pagination<Posts>> {
     return await this.doPagination(options);
+  }
+
+  async findAll(): Promise<Posts[]> {
+    return this.postRepo.find();
   }
 
   async doCreatePost(postDto: PostDto): Promise<Posts> {
