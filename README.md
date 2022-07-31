@@ -15,7 +15,10 @@
 
 ## Swagger API
 http://localhost:3000/swagger
-
+```javascript
+//Swagger doc url
+http://localhost:3000/swagger-json
+```
 ## Migration commands
 ```bash
 # Create a fresh db based on entities
